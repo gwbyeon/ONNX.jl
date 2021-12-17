@@ -19,7 +19,7 @@ from_nnlib(x::AbstractArray) = permutedims(x, ndims(x):-1:1)
 The reverse of [`from_nnlib`](@ref).
 """
 from_onnx(x::AbstractArray) = permutedims(x, ndims(x):-1:1)
-
+from_onnx(x::AbstractArray{Any, 0}) = x
 
 ##############################################################################
 #                             Conv Attributes                                #
